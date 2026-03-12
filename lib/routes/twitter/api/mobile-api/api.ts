@@ -192,7 +192,7 @@ const getUserTweetsAndRepliesByID = async (id, params = {}) => gatherLegacyFromD
 const getUserMediaByID = async (id, params = {}) => gatherLegacyFromData(await timelineMedia(id, params));
 // const getUserLikesByID = async (id, params = {}) => gatherLegacyFromData(await timelineLikes(id, params));
 const getUserTweetByStatus = async (id, params = {}) => gatherLegacyFromData(await tweetDetail(id, params), ['homeConversation-', 'conversationthread-']);
-const getListById = async (id, params = {}) => gatherLegacyFromData(await listTweets(id, params));
+const getListById = async (id, params = {}) => gatherLegacyFromData(await listTweets(id, params), ['list-conversation-']);
 
 const excludeRetweet = function (tweets) {
     const excluded = [];
